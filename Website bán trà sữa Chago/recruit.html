@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Chago Tea & Cafe</title>
+<!-- InstanceEndEditable -->
+<link href="css/chago.css" rel="stylesheet" type="text/css" />
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+<body>
+<div class="container">
+<div class="clo">
+<span id="now">Thời gian hiện tại: </span><span id="clock"></span> 
+<script>  
+function clock(){
+   var timer = new Date();
+   var hour = timer.getHours();  
+   var minute = timer.getMinutes(); 
+   var second = timer.getSeconds();  
+   if(hour < 10) {
+       hour = "0" + hour;
+   }
+   if(minute < 10) {
+       minute = "0" + minute;
+   }
+   if(second < 10) {
+       second = "0" + second;
+   }
+   var time = hour + ":" + minute + ":" + second;
+   var date = timer.getDate()+'-'+(timer.getMonth()+1)+'-'+timer.getFullYear();
+   var dateTime = date+' '+time;
+   document.getElementById("clock").innerHTML = dateTime;
+}
+setInterval("clock()",1000);
+</script>
+</div>
+<div class="banner">
+<img class="img" src="img%20logo/Banner_News.96d6d872.jpg" />
+</div>
+<div class="clearfix">
+  <div class="nav"> 
+  <a class="link-3" href="index.html">Trang chủ</a> 
+  <a class="link-3" href="intro.html" >Giới thiệu</a> 
+  <a class="link-3" href="product.html" >Sản phẩm</a> 
+  <a class="link-3" href="store.html" >Cửa hàng</a> 
+  <a class="link-3" href="recruit.html" >Tuyển dụng</a> 
+  <a class="link-3" href="signin.html">Đăng nhập</a> 
+  <a class="link-3" href="contact.html" >Liên hệ</a> 
+  </div>
+<!-- InstanceBeginEditable name="EditRegion3" -->
+<h1 class="h1">Tin tuyển dụng</h1>
+<table>
+  <tr class="strong">
+    <td width="360"><strong>Tiêu đề</strong><br /></td>
+    <td width="584"><strong>Mô tả</strong><br /></td>
+    <td width="169"><strong>Ngày công bố</strong><br /></td>
+    <td width="129"><strong>Ngày hết hạn</strong><br /></td>
+  </tr>
+  <tr>
+    <td>Tuyển dụng khu vực Hà Đông<br /></td>
+    <td>Chago AeonMall Hà Đông tuyển dụng</td>
+    <td>10/11/2021<br /></td>
+    <td>10/12/2021</td>
+  </tr>
+  <tr>
+    <td>Tuyển dụng khu vực Cầu Giấy</td>
+    <td>Tuyển dụng khu vực Cầu Giấy<br /></td>
+    <td>10/11/2021<br /></td>
+    <td>10/12/2021<br /></td>
+  </tr>
+  <tr>
+    <td>Tuyển dụng quản lý Chago Tea &amp; Caf'e Hà Nội</td>
+    <td>Tuyển dụng quản lý Chago Tea &amp; Caf'e Hà Nội<br /></td>
+    <td>22/11/2021<br /></td>
+    <td>31/12/2021</td>
+  </tr>
+</table>
+<!-- InstanceEndEditable -->
+<div class="calendar">
+<script LANGUAGE="JavaScript">
+monthnames =new Array("January","Februrary","March","April","May","June","July","August","September","October","November","Decemeber");
+var linkcount=0;
+function addlink(month,day,href)
+{varentry =new Array(3);
+entry[0]=month;
+entry[1]=day;
+entry[2]=href;
+this[linkcount++]=entry;}
+Array.prototype.addlink =addlink;
+linkdays =new Array();
+monthdays =new Array(12);
+monthdays[0]=31;
+monthdays[1]=28;
+monthdays[2]=31;
+monthdays[3]=30;
+monthdays[4]=31;
+monthdays[5]=30;
+monthdays[6]=31;
+monthdays[7]=31;
+monthdays[8]=30;
+monthdays[9]=31;
+monthdays[10]=30;
+monthdays[11]=31;
+todayDate=new Date();
+thisday=todayDate.getDay();
+thismonth=todayDate.getMonth();
+thisdate=todayDate.getDate();
+thisyear=todayDate.getYear();
+thisyear =thisyear %100;
+thisyear =((thisyear <50)?(2000+thisyear):(1900+thisyear));
+if(((thisyear %4==0)&&!(thisyear %100==0))||(thisyear %400==0))monthdays[1]++;startspaces=thisdate;
+while(startspaces >7)startspaces-=7;
+startspaces =thisday -startspaces +1;
+if(startspaces <0)startspaces+=7;
+document.write("<table>");
+document.write("<tr><td colspan=7 class='monthyear'>"+monthnames[thismonth]+" " +thisyear+"</td></tr>");
+document.write("<tr class='weektitle'>");
+document.write("<td align=center>Sun</td>");
+document.write("<td align=center>Mon</td>");
+document.write("<td align=center>Tus</td>");
+document.write("<td align=center>Wed</td>");
+document.write("<td align=center>Thu</td>");
+document.write("<td align=center>Fri</td>");
+document.write("<td align=center>Sat</td>");
+document.write("</tr>");
+document.write("<tr>");
+for(s=0;s<startspaces;s++){
+document.write("<td> </td>");}count=1;
+while(count <=monthdays[thismonth])
+{for(b =startspaces;b<7;b++){
+	linktrue=false;
+document.write("<td class='weekday'>");
+for(c=0;c<linkdays.length;c++){
+	if(linkdays[c]!=null)
+	{if((linkdays[c][0]==thismonth +1)&&(linkdays[c][1]==count))
+	{document.write("<a href=\"" +linkdays[c][2]+"\">");
+	linktrue=true;}}}
+if(count==thisdate){
+document.write("<font color='FF0000'><strong>");}
+if(count <=monthdays[thismonth]){
+document.write(count);}
+else{
+document.write(" ");}
+if(count==thisdate)
+{document.write("</strong></font>");}
+if(linktrue)
+document.write("</a>");
+document.write("</td>");count++;}
+document.write("</tr>");
+document.write("<tr>");startspaces=0;}
+document.write("</table>");
+</script>
+</div>
+
+<div class="footer">
+<div class="foot-top">
+            <ul>
+                <li>
+                    <span>CHA GO TEA & CAF'E</span>
+                   <ul>
+                        <li>
+                            <a href="">Hotline: 1900 0203
+</a>
+                        </li>
+                        <li>
+                            <a href="">Email: makerting@chagovietnam.com
+</a>
+                        </li>
+                        <li>
+                            <a href="">Thời gian làm việc : 08:00 - 22:00
+</a>
+                        </li>
+                   </ul> 
+                </li>
+                <li>
+                    <span class="sp1">CHÍNH SÁCH BÁN HÀNG
+</span>
+                    <ul>
+                         <li>
+                             <a href="">Phương thức giao nhận hàng
+</a>
+                         </li>
+                         <li>
+                             <a href="">Bảng giá giao hàng
+</a>
+                         </li>
+                         <li>
+                             <a href="">Chính sách hoàn tiền
+</a>
+                         </li>
+                         <li>
+                             <a href="">Thắc mắc - Góp ý
+</a>
+                         </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <span class="sp2">MẠNG XÃ HỘI
+</span>
+                    <ul>
+                          <li>
+                      <p id="social">
+                                <a href="#"><img class="ytb" src="img%20logo/YouTube-icon-full_color.png"/> </a>
+                                <a href="#"><img src="img%20logo/Facebook-logo-blue-circle-large-transparent-png.png"  /></a>
+                                <a href="#"><img src="img%20logo/instagram-logo-svg-vector-for-print.png" /> </a>
+                                <a href="#"><img src="img%20logo/Twitter-logo-png.png"  /></a>
+                            </p>
+                      </li>
+
+                    </ul>
+                </li>
+    </ul>
+</div>
+<div class="contt">
+<div class="footer-bottom">
+Copyright ® 2022 Chago Tea &amp; Coffe All Rights Reserved &nbsp;&nbsp;&nbsp; Design By NGUYEN DO TAN KHOA</div>
+</div>
+</div>
+</ul>
+</body>
+<!-- InstanceEnd --></html>
